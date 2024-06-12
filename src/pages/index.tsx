@@ -17,13 +17,23 @@ export default function Home() {
 			/>
 			<HeroCard
 				img='/home2.webp'
-				title='Stavebná firma Simax Prešov'
+				title='Domy na kľúč'
+				button='Prečítajte si viac o domoch na kľúč'
+				buttonHref='/domy-na-kluc'
+			/>
+			<TextBlock
+				title='Aká je cena za stavbu domu na kľúč?'
+				description='Rodinné domy v obvyklom štandarde, staviame v cene už od 1200 € za m2. Jednotlivé parametre domu vám podľa vašich požiadaviek vieme prispôsobiť na mieru individuálnym požiadavkám.'
+			/>
+			<HeroCard
+				img='/home2.webp'
+				title='Referenčné domčeky'
 				button='Dohodnime si konzultáciu'
 				buttonHref='/kontakt'
 			/>
 			<TextBlock
-				title='Dôvera, partnerstvo a kvalitné služby - kombinácia pre spoľahlivú stavebnú spoločnosť'
-				description='Od roku 2007 sme v Prešove a okolí vybudovali už desiatky rodinných domčekov. Radi postavíme dom aj pre Vás.'
+				title='Príbehy našich spokojných zákazníkov'
+				description='Od roku 2007 sme  v Prešove a okolí vybudovali už desiatky rodinných domčekov. Radi postavíme dom aj pre Vás.'
 			/>
 		</section>
 	);
