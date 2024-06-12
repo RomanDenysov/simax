@@ -16,7 +16,7 @@ export default function AnimatedLogo() {
 	const draw = {
 		hidden: { pathLength: 0, opacity: 0 },
 		visible: (i: any) => {
-			const delay = scrollYProgress + i * 0.5;
+			const delay = scrollYProgress.get() + i * 0.5;
 			return {
 				pathLength: 1,
 				opacity: 1,

@@ -1,6 +1,7 @@
 import HeroCard from '@/components/HeroCard';
 import { Icons } from '@/components/Icons';
 import { ImageSlider } from '@/components/ImageSlider';
+import NegativeListItems from '@/components/NegativeListItems';
 import PriseListItems from '@/components/PriseListItems';
 import TextBlock from '@/components/TextBlock';
 import { buttonVariants } from '@/components/ui/button';
@@ -53,6 +54,21 @@ const dummyData2 = [
 		text: 'podklady ku kolaudácií – revízne správy, záručné listy, certifikáty, atď.',
 	},
 ];
+const dummyData3 = [
+	{
+		id: 1,
+		text: 'kuchynská linka a nábytok na mieru',
+	},
+	{
+		id: 2,
+		text: 'svietidlá',
+	},
+	{
+		id: 3,
+		text: 'vonkajšie sieťové prípojky (elektrina, vodovodná a kanalizačná prípojka)',
+	},
+];
+
 export default function index() {
 	return (
 		<section className='w-full pt-20'>
@@ -84,7 +100,6 @@ export default function index() {
 					<Icons.arrowcircledark className='size-[55px]' />
 				</Link>
 			</div>
-
 			<PriseListItems
 				data={dummyData}
 				title='V cene výstavby rodinného domu na kľúč'
@@ -92,6 +107,7 @@ export default function index() {
 			/>
 			<VideoBlock />
 			<PriseListItems data={dummyData2} />
+			<NegativeListItems data={dummyData3} />
 		</section>
 	);
 }

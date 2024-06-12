@@ -10,7 +10,8 @@ import H8 from "../../public/h8.webp";
 import H9 from "../../public/h9.webp";
 import H10 from "../../public/h10.webp";
 import H11 from "../../public/h11.webp";
-import { StaticImageData } from "next/image";
+import address from '../../public/address.webp';
+import { StaticImageData } from 'next/image';
 
 const images: { [key: string]: StaticImageData } = {
 	home2: HOUSE,
@@ -25,6 +26,7 @@ const images: { [key: string]: StaticImageData } = {
 	h9: H9,
 	h10: H10,
 	h11: H11,
+	address: address,
 };
 
 export const imageImport = (img: string): StaticImageData => {

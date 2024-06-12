@@ -8,9 +8,11 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 const NAV_ITEMS = [
-	{ title: "Domov", href: "/", about: "Domovna stránka" },
-	{ title: "Domy na kluc", href: "/domy-na-kluc", about: "Domy na kluc" },
-	{ title: "O nas", href: "/o-nas", about: "O nas" },
+	{ title: 'Domov', href: '/', about: 'Domovna stránka' },
+	{ title: 'Domy na kluc', href: '/domy-na-kluc', about: 'Domy na kluc' },
+	{ title: 'Referenčné projekty', href: '/domy-na-kluc', about: 'Domy na kluc' },
+	{ title: 'O nas', href: '/o-nas', about: 'O firme Simax' },
+	{ title: 'Kontakt', href: '/kontakt', about: 'Kontakt' },
 ];
 
 type NavItemProps = {
@@ -24,10 +26,10 @@ const NavItem = ({ title, href, isActive, about }: NavItemProps) => {
 	return (
 		<Button
 			className={cn(
-				"w-full hover:text-gray-950 text-base bg-transparent focus-visible:ring-offset-0 focus-visible:ring-transparent",
-				isActive ? "underline text-gray-950" : "text-gray-500"
+				'w-full hover:text-gray-950 text-base bg-transparent focus-visible:ring-offset-0 focus-visible:ring-transparent',
+				isActive ? 'underline text-gray-950' : 'text-gray-500',
 			)}
-			variant={"link"}
+			variant={'link'}
 		>
 			<Link href={href} about={about}>
 				{title}
@@ -39,7 +41,7 @@ const NavItem = ({ title, href, isActive, about }: NavItemProps) => {
 const Navbar = () => {
 	const pathname = usePathname();
 	const router = useRouter();
-	const isMobile = useMediaQuery("(max-width: 1024px)");
+	const isMobile = useMediaQuery('(max-width: 1024px)');
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const onClick = (href: string) => {
@@ -50,17 +52,17 @@ const Navbar = () => {
 	// if (isMobile) {
 	return (
 		<Sheet open={isOpen} onOpenChange={setIsOpen}>
-			<SheetTrigger className="outline-none focus-visible:ring-offset-0 focus-visible:ring-transparent active:outline-none">
+			<SheetTrigger className='outline-none focus-visible:ring-offset-0 focus-visible:ring-transparent active:outline-none'>
 				<MenuIcon />
 			</SheetTrigger>
-			<SheetContent side="right" className="px-4">
-				<nav className="flex flex-col gap-y-4 pt-6">
+			<SheetContent side='right' className='px-4'>
+				<nav className='flex flex-col gap-y-4 pt-6'>
 					{NAV_ITEMS.map((item, index) => (
 						<Button
 							key={index}
-							variant={item.href === pathname ? "secondary" : "ghost"}
+							variant={item.href === pathname ? 'secondary' : 'ghost'}
 							onClick={() => onClick(item.href)}
-							className="w-full text-xl sm:text-2xl justify-start"
+							className='w-full h-fit py-2 text-xl  sm:text-2xl lg:text-3xl justify-start rounded-sm'
 						>
 							{item.title}
 						</Button>
